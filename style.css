@@ -341,3 +341,99 @@ footer {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
+
+
+/* Profile Avatar Styling */
+.avatar-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.4);
+}
+
+
+/* Avatar & Thought Cloud Container */
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+  display: block;
+}
+
+/* Thought Cloud Floating on Bottom-Right */
+.thought-cloud-side {
+  position: absolute;
+  bottom: -33px;
+  right: -163px; /* Moves the cloud to the side */
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  animation: floatCloud 3s ease-in-out infinite;
+}
+
+.thought-cloud-side strong {
+  color: #2563eb;
+}
+
+/* Dots Tracing from Avatar Edge to Cloud */
+.thought-cloud-side .dot {
+  position: absolute;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+}
+
+.thought-cloud-side .dot-1 {
+  width: 12px;
+  height: 12px;
+  top: 10px;
+  left: -14px;
+}
+
+.thought-cloud-side .dot-2 {
+  width: 8px;
+  height: 8px;
+  top: 0px;
+  left: -26px;
+}
+
+/* Gentle Floating Animation */
+@keyframes floatCloud {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
