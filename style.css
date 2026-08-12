@@ -275,6 +275,68 @@ nav a:hover {
 
 
 /* ==========================================
+   /// 4.5 SKILLS SECTION ///
+   ========================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-category:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.08);
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-pill {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Highlight badge for key strengths */
+.skill-pill.highlight {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #2563eb;
+}
+
+.skill-pill:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
    /// 5. BUTTONS & INTERACTIVES ///
    ========================================== */
 .btn {
