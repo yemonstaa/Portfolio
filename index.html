@@ -94,7 +94,7 @@
         <h3>MineFront</h3>
         <p>Owner and lead administrator of MineFront, an active Minecraft server network powered by a dedicated Ryzen 9 9950X with 32GB RAM. Features popular gamemodes including Skyblock, Lifesteal, and Survival with daily active improvements.</p>
         <p><strong>Server IP:</strong> <code>play.minefront.net</code></p>
-        <a href="https://minefront.net" target="_blank">Visit Website →</a>
+        <a href="javascript:void(0)" onclick="openDevModal()">Visit Website →</a>
       </div>
 
       <!-- Project 2: DonkeyVerifier -->
@@ -125,10 +125,10 @@
     <p>© 2026 Joey Christian Bautista. Built with HTML & CSS.</p>
   </footer>
 
-  <!-- Popup Modal -->
-  <div id="discordModal" class="modal-overlay" onclick="closeModal(event)">
+  <!-- Code Modal (Discord) -->
+  <div id="discordModal" class="modal-overlay" onclick="closeModal(event, 'discordModal')">
     <div class="modal-card">
-      <span class="modal-close" onclick="closeModalDirect()">&times;</span>
+      <span class="modal-close" onclick="closeModalDirect('discordModal')">&times;</span>
       <h3>Interested in the Code?</h3>
       <p>DM me on Discord to learn more or request access:</p>
       <div class="discord-tag">
@@ -137,18 +137,31 @@
     </div>
   </div>
 
+  <!-- Development Modal (MineFront) -->
+  <div id="devModal" class="modal-overlay" onclick="closeModal(event, 'devModal')">
+    <div class="modal-card">
+      <span class="modal-close" onclick="closeModalDirect('devModal')">&times;</span>
+      <h3>Under Development 🚧</h3>
+      <p>The MineFront website is currently being built and has not released yet. Stay tuned!</p>
+    </div>
+  </div>
+
   <script>
     function openModal() {
       document.getElementById('discordModal').classList.add('active');
     }
 
-    function closeModalDirect() {
-      document.getElementById('discordModal').classList.remove('active');
+    function openDevModal() {
+      document.getElementById('devModal').classList.add('active');
     }
 
-    function closeModal(event) {
-      if (event.target.id === 'discordModal') {
-        closeModalDirect();
+    function closeModalDirect(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    function closeModal(event, id) {
+      if (event.target.id === id) {
+        closeModalDirect(id);
       }
     }
   </script>
