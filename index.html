@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joey Christian Bautista | Portfolio</title>
-  
+  <meta name="description" content="Joey Christian Bautista — Aspiring Web Developer, Systems Administrator, and Technical Support Specialist. Experience with dedicated server infrastructure, B2B IT support, and Discord automation.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Syne:wght@800;900&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,6 +24,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -30,15 +33,21 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="hero-banner-card">
+    <div class="hero-banner-card reveal">
       <h1 class="hero-title">PORTFOLIO</h1>
       <span class="hero-script-overlay">Joey Christian Bautista</span>
     </div>
-    
-    <div class="year-pill">2026</div>
+
+    <div class="pill-row">
+      <div class="year-pill">2026</div>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        Open to freelance &amp; full-time roles
+      </div>
+    </div>
 
     <!-- Intro Block -->
-    <div class="hero-intro" id="about">
+    <div class="hero-intro reveal" id="about">
       <div class="avatar-wrapper">
         <img src="avatar.png" alt="Joey Christian Bautista Avatar" class="profile-avatar">
         <div class="thought-cloud-side">
@@ -47,12 +56,15 @@
           (Also known as <strong>yemonsta</strong>)
         </div>
       </div>
-      
+
       <div class="hero-bio">
         <h2 class="about-heading">ABOUT ME</h2>
         <p class="about-subscript">Hi there, I'm Joey</p>
         <p class="bio-text">Aspiring Web Developer, Systems Administrator, and Technical Support Specialist with hands-on experience managing dedicated high-performance server infrastructure, corporate IT environments, and Discord automation tools.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
+        </div>
       </div>
     </div>
   </section>
@@ -60,16 +72,16 @@
   <div class="section-divider"></div>
 
   <!-- Technical Skills Section -->
-  <section id="skills">
+  <section id="skills" class="reveal">
     <h2>Technical & Leadership Skills</h2>
     <div class="skills-grid">
-      
+
       <!-- Category 1: Systems & Infrastructure -->
       <div class="skill-category">
         <h3>Systems & Infrastructure</h3>
         <div class="pill-group">
-          <span class="skill-pill highlight">Pterodactyl Panel</span>
-          <span class="skill-pill">Linux & Windows Server</span>
+          <span class="skill-pill highlight"><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="8" rx="1"></rect><rect x="3" y="14" width="18" height="6" rx="1"></rect><circle cx="7" cy="8" r="1"></circle><circle cx="7" cy="17" r="1"></circle></svg>Pterodactyl Panel</span>
+          <span class="skill-pill"><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg>Linux & Windows Server</span>
           <span class="skill-pill">JVM Optimization</span>
           <span class="skill-pill">Dedicated Infrastructure</span>
           <span class="skill-pill">Network Diagnostics</span>
@@ -80,10 +92,10 @@
       <div class="skill-category">
         <h3>Development & Automation</h3>
         <div class="pill-group">
-          <span class="skill-pill highlight">Minecraft Java Plugins</span>
+          <span class="skill-pill highlight"><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H4a1 1 0 0 0-1 1v4"></path><path d="M16 3h4a1 1 0 0 1 1 1v4"></path><path d="M4 16v4a1 1 0 0 0 1 1h4"></path><path d="M20 16v4a1 1 0 0 1-1 1h-4"></path></svg>Minecraft Java Plugins</span>
           <span class="skill-pill">HTML5 & CSS3</span>
           <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">Discord Automation</span>
+          <span class="skill-pill"><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="2"></circle><circle cx="15" cy="12" r="2"></circle><path d="M7.5 8 6 5"></path><path d="M16.5 8 18 5"></path></svg>Discord Automation</span>
           <span class="skill-pill">Git / GitHub</span>
         </div>
       </div>
@@ -117,7 +129,7 @@
   <div class="section-divider"></div>
 
   <!-- Work Experience Section -->
-  <section id="experience">
+  <section id="experience" class="reveal">
     <h2>Work Experience</h2>
     <div class="experience-list">
 
@@ -129,10 +141,10 @@
         </div>
         <p>Deliver dual internal and external technical support, managing internal IT infrastructure while maintaining hardware and software solutions deployed to client companies.</p>
         <ul>
-          <li>Diagnose and resolve hardware, software, and network issues for internal staff to maintain daily operations.</li>
+          <li>Diagnose and resolve hardware, software, and network issues for internal staff, keeping daily operations running with minimal disruption.</li>
           <li>Deploy, configure, and troubleshoot specialized machine hardware and software provided to external business clients.</li>
-          <li>Perform routine system maintenance, software updates, and hardware repairs for client deployments.</li>
-          <li>Provide rapid-response technical troubleshooting and client support to ensure minimal operational downtime.</li>
+          <li>Perform routine system maintenance, software updates, and hardware repairs across client deployments.</li>
+          <li>Provide rapid-response technical troubleshooting and client support to reduce operational downtime.</li>
         </ul>
       </div>
 
@@ -149,7 +161,7 @@
           <li>Managed plugin dependencies, resolved version incompatibilities, and assisted clients with custom server modifications.</li>
           <li>Delivered real-time customer support, answering technical inquiries and troubleshooting user-facing issues.</li>
         </ul>
-        <p style="margin-top: 0.75rem;"><a href="https://enderhost.co" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Visit Website →</a></p>
+        <p style="margin-top: 0.75rem;"><a href="https://enderhost.co" target="_blank" rel="noopener" class="text-link">Visit Website →</a></p>
       </div>
 
     </div>
@@ -157,31 +169,92 @@
 
   <div class="section-divider"></div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3>MineFront</h3>
-        <p>Owner and lead administrator of MineFront, an active Minecraft server network powered by a dedicated Ryzen 9 9950X with 32GB RAM. Features popular gamemodes including Skyblock, Lifesteal, and Survival with daily active improvements.</p>
-        <p style="margin-top: 0.5rem;"><strong>Server IP:</strong> <code>play.minefront.net</code></p>
-        <a href="javascript:void(0)" onclick="openDevModal()">Visit Website →</a>
+<!-- Education Section -->
+<section id="education" class="reveal">
+  <h2>Education & Certifications</h2>
+
+  <div class="education-list">
+    <div class="education-card">
+      <div class="exp-header">
+        <h3>Zamboanga City State Polytechnic University</h3>
+        <span class="exp-date">2024 — Current</span>
       </div>
+      <p>2nd Year — Bachelor of Science in Information Technology (BSIT)</p>
+      <p class="education-description">
+        Studying fundamental concepts in programming, web development,
+        databases, and information technology.
+      </p>
+    </div>
+
+    <div class="education-card">
+      <div class="exp-header">
+        <h3>Self-Taught & School-Based Learning</h3>
+        <span class="exp-date">Ongoing</span>
+      </div>
+      <p>
+        Self-taught in various programming languages, development tools,
+        and technologies, with additional foundational knowledge gained
+        through academic coursework.
+      </p>
+
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>VS Code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="section-divider"></div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+
+    <!-- Featured Case Study -->
+    <div class="case-study">
+      <div class="case-study-header">
+        <h3>MineFront — Case Study</h3>
+        <span class="exp-date">Owner & Lead Administrator</span>
+      </div>
+      <div class="case-study-grid">
+        <div class="case-study-block">
+          <h4>Problem</h4>
+          <p>Running a multi-gamemode Minecraft network (Skyblock, Lifesteal, Survival) on a single box demands stable uptime, low tick lag under concurrent load, and fast recovery when plugins or JVM settings misbehave.</p>
+        </div>
+        <div class="case-study-block">
+          <h4>What I Built</h4>
+          <p>Provisioned and tuned a dedicated Ryzen 9 9950X / 32GB RAM server, configured JVM flags and startup scripts per gamemode, and set up a Pterodactyl-managed panel for isolating and monitoring each game mode independently.</p>
+        </div>
+        <div class="case-study-block">
+          <h4>Outcome</h4>
+          <p>TO BE RELEASED.</p>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;"><strong>Server IP:</strong> <code>play.minefront.net</code></p>
+      <button type="button" class="text-link-btn" onclick="openDevModal()" aria-haspopup="dialog">Visit Website →</button>
+    </div>
+
+    <div class="project-grid">
 
       <!-- Project 2 -->
       <div class="project-card">
         <h3>DonkeyVerifier</h3>
         <p>A specialized Discord verification bot designed to prevent bot attacks and automated spam accounts from joining communities. Features custom verification challenges to keep server userbases secure.</p>
-        <a href="javascript:void(0)" onclick="openModal()">View Code →</a>
+        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
       </div>
 
       <!-- Project 3 -->
       <div class="project-card">
         <h3>DonkeyLogger</h3>
         <p>A comprehensive Discord moderation logger that tracks real-time server events into designated audit channels. Logs deleted messages, channel creation/deletion, role updates, and user activity.</p>
-        <a href="javascript:void(0)" onclick="openModal()">View Code →</a>
+        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
       </div>
 
     </div>
@@ -190,10 +263,22 @@
   <div class="section-divider"></div>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2>Get In Touch</h2>
     <p>Interested in Hiring, Collaboration or have a question? Reach out!</p>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yemonstaa@gmail.com" target="_blank" class="btn">Email Me</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yemonstaa@gmail.com" target="_blank" rel="noopener" class="btn">Email Me</a>
+
+    <div class="social-row">
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.58.24 2.75.12 3.04.74.8 1.19 1.82 1.19 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56Z"/></svg>
+      </a>
+      <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.32 5.37A17.8 17.8 0 0 0 15.98 4c-.2.36-.42.84-.58 1.22a16.5 16.5 0 0 0-4.8 0A9.8 9.8 0 0 0 10.02 4a17.8 17.8 0 0 0-4.34 1.37C2.9 8.9 2.2 12.35 2.53 15.74a17.9 17.9 0 0 0 5.46 2.77c.44-.6.83-1.24 1.17-1.92-.64-.24-1.25-.54-1.83-.9.15-.11.3-.23.45-.35a12.7 12.7 0 0 0 10.44 0c.15.12.3.24.45.35-.58.36-1.19.66-1.83.9.34.68.73 1.32 1.17 1.92a17.85 17.85 0 0 0 5.46-2.77c.4-3.9-.62-7.32-2.65-10.37ZM9.68 13.6c-.9 0-1.63-.83-1.63-1.85s.72-1.85 1.63-1.85 1.65.84 1.63 1.85c0 1.02-.72 1.85-1.63 1.85Zm4.65 0c-.9 0-1.63-.83-1.63-1.85s.72-1.85 1.63-1.85 1.65.84 1.63 1.85c0 1.02-.71 1.85-1.63 1.85Z"/></svg>
+      </a>
+    </div>
   </section>
 
   <footer>
@@ -201,10 +286,10 @@
   </footer>
 
   <!-- Code Modal (Discord) -->
-  <div id="discordModal" class="modal-overlay" onclick="closeModal(event, 'discordModal')">
+  <div id="discordModal" class="modal-overlay" onclick="closeModal(event, 'discordModal')" role="dialog" aria-modal="true" aria-labelledby="discordModalTitle">
     <div class="modal-card">
-      <span class="modal-close" onclick="closeModalDirect('discordModal')">&times;</span>
-      <h3>Interested in the Code?</h3>
+      <button type="button" class="modal-close" onclick="closeModalDirect('discordModal')" aria-label="Close">&times;</button>
+      <h3 id="discordModalTitle">Interested in the Code?</h3>
       <p>DM me on Discord to learn more or request access:</p>
       <div class="discord-tag">
         <code>zeeeeeeeeeee__</code>
@@ -213,10 +298,10 @@
   </div>
 
   <!-- Development Modal (MineFront) -->
-  <div id="devModal" class="modal-overlay" onclick="closeModal(event, 'devModal')">
+  <div id="devModal" class="modal-overlay" onclick="closeModal(event, 'devModal')" role="dialog" aria-modal="true" aria-labelledby="devModalTitle">
     <div class="modal-card">
-      <span class="modal-close" onclick="closeModalDirect('devModal')">&times;</span>
-      <h3>Under Development 🚧</h3>
+      <button type="button" class="modal-close" onclick="closeModalDirect('devModal')" aria-label="Close">&times;</button>
+      <h3 id="devModalTitle">Under Development 🚧</h3>
       <p>The MineFront website is currently being built and has not released yet. Stay tuned!</p>
     </div>
   </div>
@@ -225,7 +310,6 @@
     function openModal() {
       document.getElementById('discordModal').classList.add('active');
     }
-
     function openDevModal() {
       document.getElementById('devModal').classList.add('active');
     }
@@ -239,6 +323,25 @@
         closeModalDirect(id);
       }
     }
+
+    // Scroll-reveal: fade + slide up sections as they enter view
+    (function () {
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var items = document.querySelectorAll('.reveal');
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('reveal-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function (el) { observer.observe(el); });
+    })();
   </script>
 
 </body>
