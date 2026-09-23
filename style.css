@@ -347,11 +347,22 @@ nav a:focus-visible {
 /* ==========================================
    /// 4.5 SKILLS SECTION ///
    ========================================== */
+.skills-hint {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  column-count: 2;
+  column-gap: 1.5rem;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    column-count: 1;
+  }
 }
 
 .skill-category {
@@ -361,6 +372,10 @@ nav a:focus-visible {
   border-radius: 16px;
   box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.03);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 100%;
 }
 
 .skill-category:hover {
@@ -372,6 +387,47 @@ nav a:focus-visible {
   font-size: 1.1rem;
   color: #0f172a;
   margin-bottom: 1rem;
+}
+
+/* Marquee track that scrolls skill pills continuously */
+.marquee-wrapper {
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  padding: 0.35rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0.6rem;
+  width: max-content;
+  animation: skillMarquee 24s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+.marquee-track.paused {
+  animation-play-state: paused;
+}
+
+@keyframes skillMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-wrapper {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
 }
 
 .pill-group {
@@ -391,7 +447,9 @@ nav a:focus-visible {
   font-weight: 600;
   padding: 0.35rem 0.75rem;
   border-radius: 8px;
+  white-space: nowrap;
   transition: all 0.2s ease;
+  cursor: default;
 }
 
 .pill-icon {
@@ -407,11 +465,52 @@ nav a:focus-visible {
   color: #2563eb;
 }
 
-.skill-pill:hover {
+.skill-pill:hover,
+.skill-pill:focus-visible {
   background: #2563eb;
   border-color: #2563eb;
   color: #ffffff;
   transform: translateY(-1px);
+}
+
+/* Shared tooltip that slides beside the hovered/focused pill */
+.skill-tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 240px;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.45;
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px -6px rgba(15, 23, 42, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 500;
+}
+
+.skill-tooltip[data-side="left"] {
+  transform: translateY(-50%) translateX(calc(-100% + 8px));
+}
+
+.skill-tooltip.visible {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.skill-tooltip.visible[data-side="left"] {
+  transform: translateY(-50%) translateX(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-tooltip {
+    transition: opacity 0.2s ease;
+  }
 }
 
 
@@ -556,11 +655,6 @@ nav a:focus-visible {
   font-size: 0.95rem;
 }
 
-.experience-card li em {
-  color: #94a3b8;
-  font-style: italic;
-}
-
 
 /* ==========================================
    /// 6.5 EDUCATION SECTION ///
@@ -589,6 +683,27 @@ nav a:focus-visible {
 
 .education-card p {
   color: #4b5563;
+}
+
+.education-description {
+  margin-top: 0.35rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skills-list span {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: #6d28d9;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
 }
 
 
@@ -648,11 +763,6 @@ nav a:focus-visible {
 .case-study-block p {
   color: #4b5563;
   font-size: 0.95rem;
-}
-
-.case-study-block p em {
-  color: #94a3b8;
-  font-style: italic;
 }
 
 .project-grid {
@@ -715,38 +825,6 @@ nav a:focus-visible {
   border-radius: 6px;
   color: #2563eb;
   font-size: 0.875rem;
-}
-
-
-/* ==========================================
-   /// 7.5 TESTIMONIALS SECTION ///
-   ========================================== */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.testimonial-card {
-  background: #ffffff;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 16px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.03);
-}
-
-.testimonial-quote {
-  color: #334155;
-  font-size: 0.98rem;
-  font-style: italic;
-  margin-bottom: 0.75rem;
-}
-
-.testimonial-author {
-  color: #64748b;
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 
 
@@ -936,5 +1014,9 @@ footer {
   .case-study-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .skill-tooltip {
+    max-width: 200px;
   }
 }
