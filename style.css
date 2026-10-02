@@ -1093,3 +1093,28 @@ nav .nav-toggle { display:none; }
   .hero-actions .btn { width:100%; justify-content:center; }
   .experience-card ul { padding-left:1rem; }
 }
+
+/* Small-phone refinements */
+@media (max-width: 480px) {
+  html { scroll-padding-top: 4.5rem; }
+  body { overflow-x: clip; }
+  header { padding-inline: .75rem; }
+  section { padding-inline: 1rem; }
+  #hero { padding-inline: .75rem; }
+  .hero-banner-card { padding: 2.1rem .85rem; }
+  .hero-title { overflow-wrap: anywhere; }
+  .hero-role { font-size: .92rem; line-height: 1.55; }
+  .pill-row { padding-inline: .25rem; flex-wrap: wrap; justify-content: center; }
+  .status-pill { text-align: center; line-height: 1.4; }
+  .case-study { padding: 1.1rem; }
+  .case-study-header h3 { font-size: 1.25rem; }
+  .case-study-block p,
+  .project-card p,
+  .bio-text,
+  .experience-card p,
+  .education-card p { overflow-wrap: anywhere; }
+  .project-card { min-height: 0; }
+  .skill-category { padding: 1rem; }
+  .nav-toggle { flex: 0 0 44px; }
+  nav ul a { min-height: 44px; display: flex; align-items: center; }
+}
