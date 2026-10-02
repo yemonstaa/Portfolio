@@ -18,14 +18,17 @@
 
   <!-- Header / Navigation -->
   <header>
-    <nav>
-      <div class="logo">JC</div>
-      <ul>
+    <nav aria-label="Main navigation">
+      <a class="logo" href="#hero" aria-label="Joey Christian Bautista, home">JC</a>
+      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-navigation">
         <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -34,8 +37,9 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="hero-banner-card reveal">
-      <h1 class="hero-title">PORTFOLIO</h1>
-      <span class="hero-script-overlay">Joey Christian Bautista</span>
+      <p class="hero-eyebrow">PORTFOLIO · 2026</p>
+      <h1 class="hero-title">Joey Christian<br class="desktop-break"> Bautista</h1>
+      <p class="hero-role">Web Developer <span>·</span> Systems Administrator <span>·</span> Technical Support</p>
     </div>
 
     <div class="pill-row">
@@ -63,9 +67,58 @@
         <p class="bio-text">Junior Web Developer, Systems Administrator, and Technical Support Specialist with hands-on experience managing dedicated high-performance server infrastructure, corporate IT environments, and Discord automation tools.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn">View My Work</a>
-          <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
+          <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View Résumé <span aria-hidden="true">↗</span></a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+
+    <!-- Featured Case Study -->
+    <div class="case-study">
+      <div class="case-study-header">
+        <h3>MineFront — Case Study</h3>
+        <span class="exp-date">Owner & Lead Administrator</span>
+      </div>
+      <div class="case-study-grid">
+        <div class="case-study-block">
+          <h4>Problem</h4>
+          <p>Running a multi-gamemode Minecraft network (Skyblock, Lifesteal, Survival) on a single box demands stable uptime, low tick lag under concurrent load, and fast recovery when plugins or JVM settings misbehave.</p>
+        </div>
+        <div class="case-study-block">
+          <h4>What I Built</h4>
+          <p>Provisioned and tuned a dedicated Ryzen 9 9950X / 32GB RAM server, configured JVM flags and startup scripts per gamemode, and set up a Pterodactyl-managed panel for isolating and monitoring each game mode independently.</p>
+        </div>
+        <div class="case-study-block">
+          <h4>Outcome</h4>
+          <p>The network is still in development. Public performance results will be added after launch.</p>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;"><strong>Server IP:</strong> <code>play.minefront.net</code></p>
+      <span class="project-status">Website in development</span>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>DonkeyVerifier</h3>
+        <p>A specialized Discord verification bot designed to prevent bot attacks and automated spam accounts from joining communities. Features custom verification challenges to keep server userbases secure.</p>
+        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>DonkeyLogger</h3>
+        <p>A comprehensive Discord moderation logger that tracks real-time server events into designated audit channels. Logs deleted messages, channel creation/deletion, role updates, and user activity.</p>
+        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
+      </div>
+
     </div>
   </section>
 
@@ -73,92 +126,31 @@
 
   <!-- Technical Skills Section -->
   <section id="skills" class="reveal">
-    <h2>Technical & Leadership Skills</h2>
-    <p class="skills-hint">Hover or tab onto a skill to pause it and see what it means.</p>
+    <div class="section-heading">
+      <p class="section-kicker">WHAT I WORK WITH</p>
+      <h2>Skills</h2>
+    </div>
     <div class="skills-grid">
-
-      <!-- Category 1: Systems & Infrastructure -->
-      <div class="skill-category">
-        <h3>Systems & Infrastructure</h3>
-        <div class="marquee-wrapper" data-marquee>
-          <div class="marquee-track">
-            <span class="skill-pill highlight" tabindex="0" data-tip="An open-source game server management panel used to deploy, control, and monitor servers through a web dashboard."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="8" rx="1"></rect><rect x="3" y="14" width="18" height="6" rx="1"></rect><circle cx="7" cy="8" r="1"></circle><circle cx="7" cy="17" r="1"></circle></svg>Pterodactyl Panel</span>
-            <span class="skill-pill" tabindex="0" data-tip="Administering server operating systems — permissions, services, and uptime — across both Linux and Windows environments."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg>Linux & Windows Server</span>
-            <span class="skill-pill" tabindex="0" data-tip="Tuning Java Virtual Machine flags and memory allocation to reduce lag and improve server performance.">JVM Optimization</span>
-            <span class="skill-pill" tabindex="0" data-tip="Provisioning and maintaining physical, dedicated hardware rather than shared or virtualized hosting.">Dedicated Infrastructure</span>
-            <span class="skill-pill" tabindex="0" data-tip="Identifying and resolving connectivity, latency, and routing issues across a network.">Network Diagnostics</span>
-            <!-- duplicate set for seamless loop -->
-            <span class="skill-pill highlight" aria-hidden="true" tabindex="-1" data-tip="An open-source game server management panel used to deploy, control, and monitor servers through a web dashboard."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="8" rx="1"></rect><rect x="3" y="14" width="18" height="6" rx="1"></rect><circle cx="7" cy="8" r="1"></circle><circle cx="7" cy="17" r="1"></circle></svg>Pterodactyl Panel</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Administering server operating systems — permissions, services, and uptime — across both Linux and Windows environments."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v10l9 5 9-5V7z"></path></svg>Linux & Windows Server</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Tuning Java Virtual Machine flags and memory allocation to reduce lag and improve server performance.">JVM Optimization</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Provisioning and maintaining physical, dedicated hardware rather than shared or virtualized hosting.">Dedicated Infrastructure</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Identifying and resolving connectivity, latency, and routing issues across a network.">Network Diagnostics</span>
-          </div>
+      <article class="skill-category">
+        <h3>Systems &amp; Infrastructure</h3>
+        <div class="skill-tags">
+          <span>Pterodactyl Panel</span><span>Linux &amp; Windows Server</span><span>JVM Optimization</span><span>Dedicated Infrastructure</span><span>Network Diagnostics</span>
         </div>
-      </div>
-
-      <!-- Category 2: Development & Automation -->
-      <div class="skill-category">
-        <h3>Development & Automation</h3>
-        <div class="marquee-wrapper" data-marquee>
-          <div class="marquee-track reverse">
-            <span class="skill-pill highlight" tabindex="0" data-tip="Installing, configuring, and troubleshooting Java-based plugins that extend Minecraft server functionality."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H4a1 1 0 0 0-1 1v4"></path><path d="M16 3h4a1 1 0 0 1 1 1v4"></path><path d="M4 16v4a1 1 0 0 0 1 1h4"></path><path d="M20 16v4a1 1 0 0 1-1 1h-4"></path></svg>Minecraft Java Plugins</span>
-            <span class="skill-pill" tabindex="0" data-tip="Structuring and styling web pages using the latest HTML and CSS standards.">HTML5 & CSS3</span>
-            <span class="skill-pill" tabindex="0" data-tip="Adding interactivity and dynamic behavior to web pages and applications.">JavaScript</span>
-            <span class="skill-pill" tabindex="0" data-tip="Building bots and scripts that automate moderation, verification, and logging tasks on Discord."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="2"></circle><circle cx="15" cy="12" r="2"></circle><path d="M7.5 8 6 5"></path><path d="M16.5 8 18 5"></path></svg>Discord Automation</span>
-            <span class="skill-pill" tabindex="0" data-tip="Tracking code changes with Git and collaborating on projects through GitHub repositories.">Git / GitHub</span>
-            <!-- duplicate set for seamless loop -->
-            <span class="skill-pill highlight" aria-hidden="true" tabindex="-1" data-tip="Installing, configuring, and troubleshooting Java-based plugins that extend Minecraft server functionality."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H4a1 1 0 0 0-1 1v4"></path><path d="M16 3h4a1 1 0 0 1 1 1v4"></path><path d="M4 16v4a1 1 0 0 0 1 1h4"></path><path d="M20 16v4a1 1 0 0 1-1 1h-4"></path></svg>Minecraft Java Plugins</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Structuring and styling web pages using the latest HTML and CSS standards.">HTML5 & CSS3</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Adding interactivity and dynamic behavior to web pages and applications.">JavaScript</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Building bots and scripts that automate moderation, verification, and logging tasks on Discord."><svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="2"></circle><circle cx="15" cy="12" r="2"></circle><path d="M7.5 8 6 5"></path><path d="M16.5 8 18 5"></path></svg>Discord Automation</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Tracking code changes with Git and collaborating on projects through GitHub repositories.">Git / GitHub</span>
-          </div>
+      </article>
+      <article class="skill-category">
+        <h3>Development &amp; Automation</h3>
+        <div class="skill-tags">
+          <span>HTML &amp; CSS</span><span>JavaScript</span><span>Java</span><span>Minecraft Plugins</span><span>Discord Automation</span><span>Git &amp; GitHub</span>
         </div>
-      </div>
-
-      <!-- Category 3: IT Support & Hardware -->
-      <div class="skill-category">
-        <h3>IT Support & Hardware</h3>
-        <div class="marquee-wrapper" data-marquee>
-          <div class="marquee-track">
-            <span class="skill-pill" tabindex="0" data-tip="Providing technical assistance and troubleshooting directly to business clients.">B2B Technical Support</span>
-            <span class="skill-pill" tabindex="0" data-tip="Testing and identifying faults in physical computer components.">Hardware Diagnostics</span>
-            <span class="skill-pill" tabindex="0" data-tip="Setting up and configuring hardware or software solutions at a client's site or environment.">Client Deployment</span>
-            <span class="skill-pill" tabindex="0" data-tip="Managing and resolving support requests tracked through a ticketing system.">Ticket System Resolution</span>
-            <!-- duplicate set for seamless loop -->
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Providing technical assistance and troubleshooting directly to business clients.">B2B Technical Support</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Testing and identifying faults in physical computer components.">Hardware Diagnostics</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Setting up and configuring hardware or software solutions at a client's site or environment.">Client Deployment</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Managing and resolving support requests tracked through a ticketing system.">Ticket System Resolution</span>
-          </div>
+      </article>
+      <article class="skill-category">
+        <h3>IT Support &amp; Leadership</h3>
+        <div class="skill-tags">
+          <span>B2B Technical Support</span><span>Hardware Diagnostics</span><span>Client Deployment</span><span>Ticket Resolution</span><span>Onboarding &amp; SOPs</span><span>Incident Escalation</span>
         </div>
-      </div>
-
-      <!-- Category 4: Staff Management & Leadership -->
-      <div class="skill-category">
-        <h3>Staff & Team Management</h3>
-        <div class="marquee-wrapper" data-marquee>
-          <div class="marquee-track reverse">
-            <span class="skill-pill highlight" tabindex="0" data-tip="Screening and selecting qualified candidates to join a team.">Staff Recruitment & Vetting</span>
-            <span class="skill-pill" tabindex="0" data-tip="Writing standard operating procedures and guiding new members through onboarding.">Onboarding & SOP Guides</span>
-            <span class="skill-pill" tabindex="0" data-tip="Applying and upholding community or workplace rules consistently and fairly.">Policy & Rule Enforcement</span>
-            <span class="skill-pill" tabindex="0" data-tip="Mediating disputes between people to reach fair, workable outcomes.">Conflict Resolution</span>
-            <span class="skill-pill" tabindex="0" data-tip="Recognizing when an issue needs to be raised to a higher level of support or authority.">Incident Escalation</span>
-            <!-- duplicate set for seamless loop -->
-            <span class="skill-pill highlight" aria-hidden="true" tabindex="-1" data-tip="Screening and selecting qualified candidates to join a team.">Staff Recruitment & Vetting</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Writing standard operating procedures and guiding new members through onboarding.">Onboarding & SOP Guides</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Applying and upholding community or workplace rules consistently and fairly.">Policy & Rule Enforcement</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Mediating disputes between people to reach fair, workable outcomes.">Conflict Resolution</span>
-            <span class="skill-pill" aria-hidden="true" tabindex="-1" data-tip="Recognizing when an issue needs to be raised to a higher level of support or authority.">Incident Escalation</span>
-          </div>
-        </div>
-      </div>
-
+      </article>
     </div>
   </section>
-
-  <div class="section-divider"></div>
 
   <!-- Work Experience Section -->
   <section id="experience" class="reveal">
@@ -245,55 +237,6 @@
 
   <div class="section-divider"></div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="reveal">
-    <h2>Projects</h2>
-
-    <!-- Featured Case Study -->
-    <div class="case-study">
-      <div class="case-study-header">
-        <h3>MineFront — Case Study</h3>
-        <span class="exp-date">Owner & Lead Administrator</span>
-      </div>
-      <div class="case-study-grid">
-        <div class="case-study-block">
-          <h4>Problem</h4>
-          <p>Running a multi-gamemode Minecraft network (Skyblock, Lifesteal, Survival) on a single box demands stable uptime, low tick lag under concurrent load, and fast recovery when plugins or JVM settings misbehave.</p>
-        </div>
-        <div class="case-study-block">
-          <h4>What I Built</h4>
-          <p>Provisioned and tuned a dedicated Ryzen 9 9950X / 32GB RAM server, configured JVM flags and startup scripts per gamemode, and set up a Pterodactyl-managed panel for isolating and monitoring each game mode independently.</p>
-        </div>
-        <div class="case-study-block">
-          <h4>Outcome</h4>
-          <p>TO BE RELEASED.</p>
-        </div>
-      </div>
-      <p style="margin-top: 1rem;"><strong>Server IP:</strong> <code>play.minefront.net</code></p>
-      <button type="button" class="text-link-btn" onclick="openDevModal()" aria-haspopup="dialog">Visit Website →</button>
-    </div>
-
-    <div class="project-grid">
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3>DonkeyVerifier</h3>
-        <p>A specialized Discord verification bot designed to prevent bot attacks and automated spam accounts from joining communities. Features custom verification challenges to keep server userbases secure.</p>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3>DonkeyLogger</h3>
-        <p>A comprehensive Discord moderation logger that tracks real-time server events into designated audit channels. Logs deleted messages, channel creation/deletion, role updates, and user activity.</p>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">View Code →</button>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
   <!-- Contact Section -->
   <section id="contact" class="reveal">
     <h2>Get In Touch</h2>
@@ -301,7 +244,7 @@
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yemonstaa@gmail.com" target="_blank" rel="noopener" class="btn">Email Me</a>
 
     <div class="social-row">
-      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+      <a href="https://github.com/yemonstaa" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.58.24 2.75.12 3.04.74.8 1.19 1.82 1.19 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
       </a>
       <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
@@ -329,26 +272,34 @@
     </div>
   </div>
 
-  <!-- Development Modal (MineFront) -->
-  <div id="devModal" class="modal-overlay" onclick="closeModal(event, 'devModal')" role="dialog" aria-modal="true" aria-labelledby="devModalTitle">
-    <div class="modal-card">
-      <button type="button" class="modal-close" onclick="closeModalDirect('devModal')" aria-label="Close">&times;</button>
-      <h3 id="devModalTitle">Under Development 🚧</h3>
-      <p>The MineFront website is currently being built and has not released yet. Stay tuned!</p>
-    </div>
-  </div>
-
-  <!-- Skill tooltip (single shared element, positioned via JS) -->
-  <div id="skillTooltip" class="skill-tooltip" role="tooltip"></div>
 
   <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const primaryNavigation = document.getElementById('primary-navigation');
+    navToggle.addEventListener('click', function () {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      primaryNavigation.classList.toggle('is-open', !isOpen);
+    });
+    primaryNavigation.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+        primaryNavigation.classList.remove('is-open');
+      });
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+        primaryNavigation.classList.remove('is-open');
+      }
+    });
+
     function openModal() {
       document.getElementById('discordModal').classList.add('active');
     }
-    function openDevModal() {
-      document.getElementById('devModal').classList.add('active');
-    }
-
     function closeModalDirect(id) {
       document.getElementById(id).classList.remove('active');
     }
@@ -378,58 +329,8 @@
       items.forEach(function (el) { observer.observe(el); });
     })();
 
-    // Skills marquee: pause on hover/focus of a pill, show a tooltip beside it
-    (function () {
-      var tooltip = document.getElementById('skillTooltip');
-      if (!tooltip) return;
-
-      function positionTooltip(pill) {
-        var rect = pill.getBoundingClientRect();
-        var spaceRight = window.innerWidth - rect.right;
-        var top = rect.top + rect.height / 2;
-
-        if (spaceRight > 260) {
-          tooltip.dataset.side = 'right';
-          tooltip.style.left = (rect.right + 12) + 'px';
-        } else {
-          tooltip.dataset.side = 'left';
-          tooltip.style.left = (rect.left - 12) + 'px';
-        }
-        tooltip.style.top = top + 'px';
-      }
-
-      document.querySelectorAll('[data-marquee]').forEach(function (wrapper) {
-        var track = wrapper.querySelector('.marquee-track');
-        var pills = track.querySelectorAll('.skill-pill');
-
-        pills.forEach(function (pill) {
-          function show() {
-            track.classList.add('paused');
-            tooltip.textContent = pill.dataset.tip || '';
-            positionTooltip(pill);
-            tooltip.classList.add('visible');
-          }
-          function hide() {
-            track.classList.remove('paused');
-            tooltip.classList.remove('visible');
-          }
-          pill.addEventListener('mouseenter', show);
-          pill.addEventListener('mouseleave', hide);
-          pill.addEventListener('focus', show);
-          pill.addEventListener('blur', hide);
-        });
-
-        wrapper.addEventListener('mouseleave', function () {
-          track.classList.remove('paused');
-          tooltip.classList.remove('visible');
-        });
-      });
-
-      window.addEventListener('scroll', function () {
-        tooltip.classList.remove('visible');
-      }, { passive: true });
-    })();
   </script>
 
 </body>
 </html>
+
