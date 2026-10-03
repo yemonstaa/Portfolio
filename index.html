@@ -1,353 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joey Christian Bautista | Portfolio</title>
-  <meta name="description" content="Joey Christian Bautista — Aspiring Web Developer, Systems Administrator, and Technical Support Specialist. Experience with dedicated server infrastructure, B2B IT support, and Discord automation.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Syne:wght@800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css?v=20261003-4">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fc">
+<meta name="description" content="Joey Christian Bautista - junior web developer, systems administrator, and technical support specialist. Explore desktop software, Minecraft plugins, Discord automation, and infrastructure projects.">
+<title>Joey Christian Bautista | Developer &amp; Systems Specialist</title>
+<link rel="icon" href="avatar.png">
+<style>
+/* A compact, self-contained portfolio. No external font or script dependencies. */
+:root{--paper:#f7f8fc;--white:#fff;--ink:#182238;--muted:#5c6578;--line:#dfe4ef;--blue:#3558db;--indigo:#4340b6;--soft:#edf0fc;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{line-height:1.15}a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;display:block}svg{display:block}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #5575f0;outline-offset:5px}a,button{touch-action:manipulation}::selection{background:#dce3ff;color:#162354}.wrap{width:min(1120px,calc(100% - 96px));margin-inline:auto}.skip{position:fixed;top:-100px;left:20px;z-index:99;background:white;padding:12px 20px;border:2px solid var(--blue)}.skip:focus{top:12px}.eyebrow{font-size:11px;line-height:1.5;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--blue)}.section{padding-block:96px;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:36px}.section-head h2,.about h2{font-size:clamp(30px,3.3vw,42px);letter-spacing:-.04em;margin-top:12px}.section-head>p{max-width:340px;font-size:14px;color:var(--muted)}.arrow{font-size:18px;line-height:1}.button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:50px;padding:12px 22px;background:var(--blue);border:1px solid var(--blue);border-radius:8px;color:white;font-size:14px;font-weight:650;transition:background .2s,transform .2s}.button:hover{background:#2643b1;transform:translateY(-2px)}.button.secondary{background:white;color:var(--ink);border-color:var(--line)}.button.secondary:hover{border-color:var(--blue);background:var(--soft)}.text-link{display:inline-flex;align-items:center;gap:14px;min-height:44px;font-weight:650;font-size:13px;color:var(--blue)}.text-link:hover{text-decoration:underline;text-underline-offset:5px}.actions{display:flex;flex-wrap:wrap;gap:12px}
+/* Navigation */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(247,248,252,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative}.brand{display:flex;align-items:center;gap:12px;font-weight:650;font-size:14px;letter-spacing:-.02em}.monogram{display:grid;place-items:center;background:var(--blue);color:#fff;width:36px;height:36px;border-radius:8px;font-size:13px;letter-spacing:-.04em}.nav-links{list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:30px;font-size:13px;font-weight:550}.nav-links a{display:flex;align-items:center;min-height:44px}.nav-links a:hover{color:var(--blue)}.nav-links .nav-contact{border:1px solid #c9d0e3;border-radius:7px;padding:0 18px}.menu{display:none;min-width:44px;min-height:44px;align-items:center;justify-content:center;gap:8px;background:white;border:1px solid var(--line);border-radius:7px;font-size:12px;color:var(--ink)}
+/* Introduction */
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.45fr 1fr;gap:70px;align-items:center}.availability{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#356151;margin-bottom:24px}.availability::before{content:"";width:6px;height:6px;border-radius:50%;background:#398766;box-shadow:0 0 0 4px #e4f1ea}.hero .eyebrow{color:var(--muted);letter-spacing:.12em}.hero h1{font-size:clamp(42px,5.2vw,66px);letter-spacing:-.057em;line-height:1.05;font-weight:700;margin-top:18px}.hero h1 span{color:var(--blue)}.intro{max-width:490px;color:var(--muted);font-size:16px;line-height:1.85;margin:24px 0 28px}.hero-meta{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:26px;font-size:12px;color:var(--muted)}.hero-meta a{color:var(--ink);border-bottom:1px solid #bcc5da}.profile{background:#172447;border:1px solid #27355b;border-radius:var(--radius);color:white;padding:32px;box-shadow:0 16px 40px -24px #14295766;position:relative;overflow:hidden}.profile::before{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff10;border-radius:50%;right:-150px;top:-100px;box-shadow:0 0 0 32px #ffffff03,0 0 0 64px #ffffff03;pointer-events:none}.profile-person{display:flex;align-items:center;gap:14px;padding-bottom:26px;border-bottom:1px solid #ffffff22;position:relative}.profile-person img{width:52px;height:52px;object-fit:cover;border-radius:12px;background:#d7e0f9}.profile-person strong{font-size:14px;line-height:1.5;display:block}.profile-person span{font-size:12px;color:#aebbd8}.practice{display:grid;grid-template-columns:25px 1fr;gap:12px;padding-top:24px}.practice>span{color:#899cd0;font-size:11px;font-family:monospace;padding-top:4px}.practice h2{font-size:15px;font-weight:550;margin-bottom:5px;letter-spacing:-.015em}.practice p{color:#b3bfd9;font-size:12px;line-height:1.65}.hero-foot{display:flex;justify-content:space-between;padding:20px 0 26px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* Selected work */
+.projects{padding-top:60px}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.project{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;min-width:0;transition:border-color .2s,box-shadow .2s}.project:hover{border-color:#afbce6;box-shadow:0 12px 32px -24px #263e8b66}.project-top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:26px}.category{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:650}.project-number{color:#9da8bf;font:12px monospace}.project h3{font-size:27px;letter-spacing:-.035em;margin-bottom:14px}.project p{color:var(--muted);font-size:14px;line-height:1.8}.project ul{padding-left:18px;margin:18px 0 22px;font-size:13px;color:#444e63}.project li{margin-bottom:6px}.project li::marker{color:var(--blue)}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:18px}.tags span{border:1px solid var(--line);background:#f8f9fc;border-radius:5px;padding:4px 9px;font-size:10px;color:#515e78;line-height:1.5}.project-bottom{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.project-bottom small{font-size:11px;color:var(--muted)}.featured{grid-column:1/-1;display:grid;grid-template-columns:1.25fr 1fr;gap:44px;background:linear-gradient(110deg,#fff 55%,#f0f3ff 100%)}.feature-copy{display:flex;flex-direction:column;min-width:0}.featured h3{font-size:34px}.featured .project-top{margin-bottom:18px}.system-visual{background:#e9eefc;border:1px solid #d9e1f5;border-radius:12px;display:flex;flex-direction:column;justify-content:center;padding:32px;min-width:0;position:relative}.system-visual .eyebrow{font-size:10px;margin-bottom:22px}.flow-item{background:#fff;border:1px solid #d7dff2;border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 10px #18223803}.flow-item svg{width:22px;height:22px;stroke:var(--blue);stroke-width:1.5;fill:none;flex-shrink:0}.flow-item strong{display:block;font-size:13px;font-weight:650}.flow-item span{font-size:10px;color:var(--muted)}.flow-line{height:20px;border-left:1px dashed #8f9fcd;margin-left:27px}.visual-caption{font-size:10px!important;color:#5d6d92!important;letter-spacing:.08em;text-transform:uppercase;margin-top:22px}.compact h3{font-size:23px}.compact .project-top{margin-bottom:18px}.status{display:inline-flex;align-items:center;gap:7px;color:#61509a!important}.status::before{content:"";width:5px;height:5px;background:#8271bc;border-radius:50%}
+/* About, skills and experience */
+.about{display:grid;grid-template-columns:.85fr 1.4fr;gap:90px}.about-copy>p{color:var(--muted);margin-bottom:18px;font-size:15px}.about-copy>p:first-child{font-size:20px;line-height:1.65;letter-spacing:-.02em;color:var(--ink)}.education{margin-top:30px;padding:22px 0 0;border-top:1px solid var(--line)}.education h3{font-size:14px;margin:8px 0}.education p{font-size:13px;color:var(--muted)}.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:54px}.skill{border-top:2px solid #cbd5f1;padding-top:20px}.skill h3{font-size:15px;margin-bottom:13px}.skill p{font-size:13px;color:var(--muted);line-height:1.9}.experience{display:grid;grid-template-columns:270px 1fr;gap:48px}.experience-intro h2{font-size:34px;letter-spacing:-.04em;margin-top:12px}.job{display:grid;grid-template-columns:1fr auto;gap:12px 20px;padding:0 0 32px;margin-bottom:32px;border-bottom:1px solid var(--line)}.job:last-child{margin-bottom:0}.job h3{font-size:19px;letter-spacing:-.025em}.job .role{font-size:13px;color:var(--muted);margin-top:6px}.job time{font-size:11px;color:var(--muted);padding-top:3px}.job ul{grid-column:1/-1;margin:0;padding-left:17px;font-size:14px;color:var(--muted)}.job li{padding:4px 0}.job .text-link{grid-column:1/-1;justify-self:start}.contact{background:#172447;color:#fff;border-radius:20px;padding:54px 56px;margin-bottom:70px;display:flex;align-items:center;justify-content:space-between;gap:40px}.contact .eyebrow{color:#a6b7f5}.contact h2{font-size:clamp(30px,3.4vw,42px);letter-spacing:-.04em;margin:12px 0 16px}.contact p{color:#b6c2dd;font-size:14px;max-width:420px}.contact-links{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:12px}.contact .button{background:#fff;color:#182447;border-color:white}.contact .button:hover{background:#e5ebff}.contact-email{font-size:13px;color:#cbd5ed;overflow-wrap:anywhere}.contact-extra{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#cbd5ed}.contact-extra a{border-bottom:1px solid #627198}.footer{border-top:1px solid var(--line);padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:11px;color:var(--muted)}.footer a{display:flex;align-items:center;gap:12px;min-height:44px}
+@media(min-width:1400px){.hero{padding-block:104px 88px}}
+@media(max-width:1000px){.wrap{width:calc(100% - 64px)}.hero{gap:36px;grid-template-columns:1.2fr 1fr}.hero h1{font-size:50px}.profile{padding:26px}.featured{gap:28px}.project{padding:26px}.system-visual{padding:24px}.about{gap:48px}.experience{grid-template-columns:220px 1fr;gap:32px}.contact{padding:42px}}
+@media(max-width:760px){html{scroll-padding-top:85px}.wrap{width:calc(100% - 40px)}.nav{min-height:68px;flex-wrap:wrap;gap:0}.brand{font-size:13px}.monogram{width:33px;height:33px}.nav-links{width:100%;gap:0;padding:8px 0 14px;flex-direction:column;align-items:stretch}.nav-links a{padding:10px 12px;border-radius:7px}.nav-links .nav-contact{border:0;padding:10px 12px}.nav-links a:hover{background:var(--soft)}.js .menu{display:inline-flex}.js .nav-links{display:none}.js .nav-links.is-open{display:flex}.hero{padding:46px 0 34px;grid-template-columns:1fr;gap:34px}.hero h1{font-size:clamp(39px,8.7vw,58px);line-height:1.08}.availability{margin-bottom:21px;font-size:11px}.intro{font-size:15px;line-height:1.8;margin:20px 0 24px}.hero-meta{margin-top:22px;gap:14px}.profile{padding:24px}.profile-person{padding-bottom:18px}.practice{padding-top:18px}.hero-foot{font-size:9px;padding-top:18px;gap:20px}.section{padding-block:58px}.section-head{display:block;margin-bottom:26px}.section-head>p{margin-top:16px;max-width:420px}.project-grid{grid-template-columns:1fr;gap:18px}.featured{grid-column:auto;grid-template-columns:1fr;gap:24px}.project{padding:24px}.featured h3{font-size:30px}.system-visual{padding:24px}.project-top{margin-bottom:20px}.about{grid-template-columns:1fr;gap:26px}.about-copy>p:first-child{font-size:19px}.skills{grid-template-columns:1fr;gap:25px;margin-top:36px}.skill{padding-top:16px}.experience{grid-template-columns:1fr;gap:30px}.job{grid-template-columns:1fr;gap:10px}.job ul,.job .text-link{grid-column:auto}.job time{grid-row:2;padding:0}.contact{display:block;padding:32px 26px;margin-bottom:38px;border-radius:14px}.contact-links{margin-top:26px}.contact p{font-size:14px}.footer{align-items:flex-start;font-size:10px;gap:16px}.footer p{max-width:220px}.footer a{flex-shrink:0;min-height:32px}.contact-extra{gap:12px}.section-head h2,.about h2{font-size:32px}}
+@media(max-width:360px){.wrap{width:calc(100% - 32px)}.brand{gap:9px;font-size:12px}.hero h1{font-size:36px}.actions{flex-direction:column}.actions .button{width:100%}.project{padding:20px}.project-bottom{align-items:flex-start;flex-direction:column;gap:0}.profile{padding:20px}.hero-foot{letter-spacing:.07em}.contact{padding:28px 22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+@media print{.site-header,.menu,.contact,.footer,.actions{display:none}.wrap{width:100%}.section{padding-block:24px}.hero{padding-block:20px}.project,.job{break-inside:avoid}body{background:white}}
+</style>
 </head>
-<body>
-
-  <!-- Header / Navigation -->
-  <header>
-    <nav aria-label="Main navigation">
-      <a class="logo" href="#hero" aria-label="Joey Christian Bautista, home">JC</a>
-      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="primary-navigation">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-banner-card reveal">
-      <p class="hero-eyebrow">PORTFOLIO · 2026</p>
-      <h1 class="hero-title">Joey Christian<br class="desktop-break"> Bautista</h1>
-      <p class="hero-role">Web Developer <span>·</span> Systems Administrator <span>·</span> Technical Support</p>
-    </div>
-
-    <div class="pill-row">
-      <div class="year-pill">2026</div>
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        Open to freelance &amp; full-time roles
-      </div>
-    </div>
-
-    <!-- Intro Block -->
-    <div class="hero-intro reveal" id="about">
-      <div class="avatar-wrapper">
-        <img src="avatar.png" alt="Joey Christian Bautista Avatar" class="profile-avatar">
-        <div class="thought-cloud-side">
-          <span class="dot dot-1"></span>
-          <span class="dot dot-2"></span>
-          (Also known as <strong>yemonsta</strong>)
-        </div>
-      </div>
-
-      <div class="hero-bio">
-        <h2 class="about-heading">ABOUT ME</h2>
-        <p class="about-subscript">Hi there, I'm Joey</p>
-        <p class="bio-text">Junior Web Developer, Systems Administrator, and Technical Support Specialist with hands-on experience managing dedicated high-performance server infrastructure, corporate IT environments, and Discord automation tools.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn">View My Work</a>
-          <a href="resume-2026.pdf" class="btn btn-outline" target="_blank" rel="noopener">View Résumé <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Projects Section -->
-  <section id="projects" class="reveal">
-    <h2>Projects</h2>
-
-    <!-- Featured Case Study -->
-    <div class="case-study">
-      <div class="case-study-header">
-        <h3>MineFront — Case Study</h3>
-        <span class="exp-date">Owner & Lead Administrator</span>
-      </div>
-      <div class="case-study-grid">
-        <div class="case-study-block">
-          <h4>Problem</h4>
-          <p>Running a multi-gamemode Minecraft network (Skyblock, Lifesteal, Survival) on a single box demands stable uptime, low tick lag under concurrent load, and fast recovery when plugins or JVM settings misbehave.</p>
-        </div>
-        <div class="case-study-block">
-          <h4>What I Built</h4>
-          <p>Provisioned and tuned a dedicated Ryzen 9 9950X / 32GB RAM server, configured JVM flags and startup scripts per gamemode, and set up a Pterodactyl-managed panel for isolating and monitoring each game mode independently.</p>
-        </div>
-        <div class="case-study-block">
-          <h4>Outcome</h4>
-          <p>The network is still in development. Public performance results will be added after launch.</p>
-        </div>
-      </div>
-      <p style="margin-top: 1rem;"><strong>Server IP:</strong> <code>play.minefront.net</code></p>
-      <span class="project-status">Website in development</span>
-    </div>
-
-    <div class="project-grid">
-
-      <!-- Project 2 -->
-           <div class="project-card">
-        <h3>DonkeyVerifier</h3>
-        <p>A Discord verification bot with a one-click panel that assigns the verified role. It checks for members who already have the role and returns private error messages when the role is not configured.</p>
-        <div class="skill-tags project-tech"><span>JavaScript</span><span>Discord.js</span><span>Role automation</span></div>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">Private repo · Ask for access →</button>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3>DonkeyLogger</h3>
-        <p>A Discord moderation logger for message activity, channel creation, edits and deletion, member role changes, and voice-channel moves. Audit-log lookups identify who made supported administrative changes.</p>
-        <div class="skill-tags project-tech"><span>JavaScript</span><span>Discord.js</span><span>Audit logs</span></div>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">Private repo · Ask for access →</button>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card">
-        <h3>Tillstead — Desktop POS</h3>
-        <p>An offline-first desktop POS for a single register, with cashier and admin roles, product search, USB barcode scanning, held orders, and cash or GCash checkout. It tracks stock and low-stock alerts, supports admin-protected voids and refunds, CSV import and export, sales reports, local backups, and 58 mm or 80 mm ESC/POS receipts.</p>
-        <div class="skill-tags project-tech"><span>Electron</span><span>React · TypeScript</span><span>SQLite</span><span>ESC/POS</span></div>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">Private repo · Ask for access →</button>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card">
-        <h3>MFDungeons</h3>
-        <p>A Paper plugin for configurable, party-based Minecraft dungeons. Admins build runs in a GUI with isolated worlds and MythicMobs waves and bosses. Runs can advance on mob clears, boss defeats, doors, timers, area holds, chests, mechanisms, or keys, with timed BossBars, rewards, and automatic instance cleanup.</p>
-        <div class="skill-tags project-tech"><span>Java</span><span>Paper</span><span>MythicMobs</span><span>Instance worlds</span></div>
-        <button type="button" class="text-link-btn" onclick="openModal()" aria-haspopup="dialog">Private repo · Ask for access →</button>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Technical Skills Section -->
-  <section id="skills" class="reveal">
-    <div class="section-heading">
-      <p class="section-kicker">WHAT I WORK WITH</p>
-      <h2>Skills</h2>
-    </div>
-    <div class="skills-grid">
-      <article class="skill-category">
-        <h3>Systems &amp; Infrastructure</h3>
-        <div class="skill-tags">
-          <span>Pterodactyl Panel</span><span>Linux &amp; Windows Server</span><span>JVM Optimization</span><span>Dedicated Infrastructure</span><span>Network Diagnostics</span>
-        </div>
-      </article>
-      <article class="skill-category">
-        <h3>Development &amp; Automation</h3>
-        <div class="skill-tags">
-          <span>HTML &amp; CSS</span><span>JavaScript</span><span>Java</span><span>Minecraft Plugins</span><span>Discord Automation</span><span>Git &amp; GitHub</span>
-        </div>
-      </article>
-      <article class="skill-category">
-        <h3>IT Support &amp; Leadership</h3>
-        <div class="skill-tags">
-          <span>B2B Technical Support</span><span>Hardware Diagnostics</span><span>Client Deployment</span><span>Ticket Resolution</span><span>Onboarding &amp; SOPs</span><span>Incident Escalation</span>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Work Experience Section -->
-  <section id="experience" class="reveal">
-    <h2>Work Experience</h2>
-    <div class="experience-list">
-
-      <!-- Job 1 -->
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>IT Troubleshooter — Small Business & B2B Solutions</h3>
-          <span class="exp-date">9/26/25 — Current</span>
-        </div>
-        <p>Deliver dual internal and external technical support, managing internal IT infrastructure while maintaining hardware and software solutions deployed to client companies.</p>
-        <ul>
-          <li>Diagnose and resolve hardware, software, and network issues for internal staff, keeping daily operations running with minimal disruption.</li>
-          <li>Deploy, configure, and troubleshoot specialized machine hardware and software provided to external business clients.</li>
-          <li>Perform routine system maintenance, software updates, and hardware repairs across client deployments.</li>
-          <li>Provide rapid-response technical troubleshooting and client support to reduce operational downtime.</li>
-        </ul>
-      </div>
-
-      <!-- Job 2 -->
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>EnderHost — Technical Support & Infrastructure Specialist</h3>
-          <span class="exp-date">6/26/26 — Current</span>
-        </div>
-        <p>Provided hands-on technical support and infrastructure maintenance for client game servers, ensuring maximum performance and minimal downtime.</p>
-        <ul>
-          <li>Diagnosed and resolved complex server crash logs and technical problems reported through ticket systems.</li>
-          <li>Optimized startup commands, JVM arguments, and Java runtime versions across varying server environments.</li>
-          <li>Managed plugin dependencies, resolved version incompatibilities, and assisted clients with custom server modifications.</li>
-          <li>Delivered real-time customer support, answering technical inquiries and troubleshooting user-facing issues.</li>
-        </ul>
-        <p style="margin-top: 0.75rem;"><a href="https://enderhost.co" target="_blank" rel="noopener" class="text-link">Visit Website →</a></p>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Education Section -->
-  <section id="education" class="reveal">
-    <h2>Education & Certifications</h2>
-
-    <div class="education-list">
-      <div class="education-card">
-        <div class="exp-header">
-          <h3>Zamboanga City State Polytechnic University</h3>
-          <span class="exp-date">2024 — Current</span>
-        </div>
-        <p>2nd Year — Bachelor of Science in Information Technology (BSIT)</p>
-        <p class="education-description">
-          Studying fundamental concepts in programming, web development,
-          databases, and information technology.
-        </p>
-      </div>
-
-      <div class="education-card">
-        <div class="exp-header">
-          <h3>Self-Taught & School-Based Learning</h3>
-          <span class="exp-date">Ongoing</span>
-        </div>
-        <p>
-          Self-taught in various programming languages, development tools,
-          and technologies, with additional foundational knowledge gained
-          through academic coursework.
-        </p>
-
-        <div class="skills-list">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Java</span>
-          <span>Python</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>VS Code</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Contact Section -->
-  <section id="contact" class="reveal">
-    <h2>Get In Touch</h2>
-    <p>Interested in Hiring, Collaboration or have a question? Reach out!</p>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yemonstaa@gmail.com" target="_blank" rel="noopener" class="btn">Email Me</a>
-
-    <div class="social-row">
-      <a href="https://github.com/yemonstaa" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.58.24 2.75.12 3.04.74.8 1.19 1.82 1.19 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-      </a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56Z"/></svg>
-      </a>
-      <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord" class="social-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.32 5.37A17.8 17.8 0 0 0 15.98 4c-.2.36-.42.84-.58 1.22a16.5 16.5 0 0 0-4.8 0A9.8 9.8 0 0 0 10.02 4a17.8 17.8 0 0 0-4.34 1.37C2.9 8.9 2.2 12.35 2.53 15.74a17.9 17.9 0 0 0 5.46 2.77c.44-.6.83-1.24 1.17-1.92-.64-.24-1.25-.54-1.83-.9.15-.11.3-.23.45-.35a12.7 12.7 0 0 0 10.44 0c.15.12.3.24.45.35-.58.36-1.19.66-1.83.9.34.68.73 1.32 1.17 1.92a17.85 17.85 0 0 0 5.46-2.77c.4-3.9-.62-7.32-2.65-10.37ZM9.68 13.6c-.9 0-1.63-.83-1.63-1.85s.72-1.85 1.63-1.85 1.65.84 1.63 1.85c0 1.02-.72 1.85-1.63 1.85Zm4.65 0c-.9 0-1.63-.83-1.63-1.85s.72-1.85 1.63-1.85 1.65.84 1.63 1.85c0 1.02-.71 1.85-1.63 1.85Z"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Joey Christian Bautista. Built with HTML & CSS.</p>
-  </footer>
-
-  <!-- Code Modal (Discord) -->
-  <div id="discordModal" class="modal-overlay" onclick="closeModal(event, 'discordModal')" role="dialog" aria-modal="true" aria-labelledby="discordModalTitle">
-    <div class="modal-card">
-      <button type="button" class="modal-close" onclick="closeModalDirect('discordModal')" aria-label="Close">&times;</button>
-      <h3 id="discordModalTitle">Interested in the Code?</h3>
-      <p>DM me on Discord to learn more or request access:</p>
-      <div class="discord-tag">
-        <code>zeeeeeeeeeee__</code>
-      </div>
-    </div>
-  </div>
-
-
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const primaryNavigation = document.getElementById('primary-navigation');
-    navToggle.addEventListener('click', function () {
-      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!isOpen));
-      navToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-      primaryNavigation.classList.toggle('is-open', !isOpen);
-    });
-    primaryNavigation.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open navigation');
-        primaryNavigation.classList.remove('is-open');
-      });
-    });
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open navigation');
-        primaryNavigation.classList.remove('is-open');
-      }
-    });
-
-    function openModal() {
-      document.getElementById('discordModal').classList.add('active');
-    }
-    function closeModalDirect(id) {
-      document.getElementById(id).classList.remove('active');
-    }
-
-    function closeModal(event, id) {
-      if (event.target.id === id) {
-        closeModalDirect(id);
-      }
-    }
-
-    // Scroll-reveal: fade + slide up sections as they enter view
-    (function () {
-      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var items = document.querySelectorAll('.reveal');
-      if (prefersReduced || !('IntersectionObserver' in window)) {
-        items.forEach(function (el) { el.classList.add('reveal-visible'); });
-        return;
-      }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      items.forEach(function (el) { observer.observe(el); });
-    })();
-
-  </script>
-
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav wrap" aria-label="Main navigation">
+<a class="brand" href="#top" aria-label="Joey Christian Bautista, home"><span class="monogram" aria-hidden="true">JC</span><span>Joey Christian Bautista</span></a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></button>
+<ul class="nav-links" id="navigation"><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">&nbsp;↗</span></a></li></ul>
+</nav></header>
+<main id="main">
+<div class="wrap">
+<section class="hero" aria-labelledby="hero-title">
+<div><p class="availability">Open to freelance &amp; full-time opportunities</p><p class="eyebrow">Developer · Systems administrator · IT support</p><h1 id="hero-title">Practical software.<br><span>Reliable systems.</span></h1><p class="intro">I’m Joey Christian Bautista, a junior web developer and IT specialist. I build useful tools and support the infrastructure that keeps businesses and online communities running.</p><div class="actions"><a class="button" href="#projects">Explore my work <span class="arrow" aria-hidden="true">↘</span></a><a class="button secondary" href="resume-2026.pdf" target="_blank" rel="noopener">View résumé <span class="arrow" aria-hidden="true">↗</span></a></div><div class="hero-meta"><span>Zamboanga City, Philippines</span><a href="https://github.com/yemonstaa" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+<aside class="profile" aria-label="Areas of work"><div class="profile-person"><img src="avatar.png" width="52" height="52" alt="Joey’s pixel avatar"><div><strong>Joey Christian Bautista</strong><span>Also known as yemonsta</span></div></div><div class="practice"><span>01</span><div><h2>Build</h2><p>Web development, desktop tools,<br>and community automation.</p></div></div><div class="practice"><span>02</span><div><h2>Operate</h2><p>Dedicated servers, game infrastructure,<br>and system configuration.</p></div></div><div class="practice"><span>03</span><div><h2>Support</h2><p>Business IT, hardware troubleshooting,<br>and client deployments.</p></div></div></aside>
+</section>
+<div class="hero-foot"><span>Software / Infrastructure / Support</span><span>Selected work below ↓</span></div>
+<section class="section projects" id="projects" aria-labelledby="projects-title">
+<div class="section-head"><div><p class="eyebrow">01 / Selected work</p><h2 id="projects-title">Built to solve real problems.</h2></div><p>A selection of desktop software, community tools, and infrastructure work.</p></div>
+<div class="project-grid">
+<article class="project featured"><div class="feature-copy"><div class="project-top"><span class="category">Desktop software</span><span class="project-number">01</span></div><h3>Tillstead</h3><p>A desktop point-of-sale system designed to keep a single register working offline, from the first scan to the printed receipt.</p><ul><li>Cashier and admin roles, barcode scanning, held orders, and cash or GCash checkout.</li><li>Stock tracking, low-stock alerts, protected voids and refunds, CSV import/export, reports, and local backups.</li><li>58 mm and 80 mm ESC/POS thermal receipts.</li></ul><div class="tags" aria-label="Technologies"><span>Electron</span><span>React</span><span>TypeScript</span><span>SQLite</span><span>ESC/POS</span></div><div class="project-bottom"><small>Private repository</small><a class="text-link" href="mailto:yemonstaa@gmail.com?subject=Tillstead%20project%20enquiry">Discuss this project <span aria-hidden="true">↗</span></a></div></div>
+<div class="system-visual" aria-label="Tillstead capability overview"><p class="eyebrow">From checkout to receipt</p><div class="flow-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4M7 8h10M7 12h5"/></svg><div><strong>Register</strong><span>Scan · Hold · Checkout</span></div></div><div class="flow-line" aria-hidden="true"></div><div class="flow-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8l9-5Zm0 9 9-4m-9 4L3 8m9 4v10M7 5.8l10 5.5"/></svg><div><strong>Inventory</strong><span>Stock · Alerts · Reports</span></div></div><div class="flow-line" aria-hidden="true"></div><div class="flow-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Zm3 5h6m-6 4h6"/></svg><div><strong>Receipt</strong><span>58 / 80 mm thermal printing</span></div></div><p class="visual-caption">Offline operation. Local data.</p></div></article>
+<article class="project"><div class="project-top"><span class="category">Minecraft plugin</span><span class="project-number">02</span></div><h3>MFDungeons</h3><p>A configurable dungeon system for Paper, built around party runs, isolated worlds, and MythicMobs encounters.</p><ul><li>GUI setup with custom waves and bosses.</li><li>Progression through mob clears, boss defeats, doors, timers, area holds, chests, mechanisms, or keys.</li><li>Timed BossBars, rewards, and automatic instance cleanup.</li></ul><div class="tags" aria-label="Technologies"><span>Java</span><span>Paper</span><span>MythicMobs</span><span>Instance worlds</span></div><div class="project-bottom"><small>Private repository</small><a class="text-link" href="mailto:yemonstaa@gmail.com?subject=MFDungeons%20project%20enquiry">Discuss this project <span aria-hidden="true">↗</span></a></div></article>
+<article class="project"><div class="project-top"><span class="category">Infrastructure</span><span class="project-number">03</span></div><h3>MineFront</h3><p>Owner and lead administrator of a Minecraft network spanning Skyblock, Lifesteal, and Survival.</p><ul><li>Dedicated Ryzen 9 9950X server with 32 GB RAM.</li><li>JVM tuning and startup configuration for each game mode.</li><li>Pterodactyl management to isolate and monitor server instances.</li></ul><div class="tags" aria-label="Technologies"><span>Pterodactyl</span><span>JVM</span><span>Dedicated infrastructure</span></div><div class="project-bottom"><small class="status">In development</small><a class="text-link" href="mailto:yemonstaa@gmail.com?subject=MineFront%20project%20enquiry">Discuss this project <span aria-hidden="true">↗</span></a></div></article>
+<article class="project compact"><div class="project-top"><span class="category">Discord automation</span><span class="project-number">04</span></div><h3>DonkeyVerifier</h3><p>A one-click verification panel that assigns a verified role, checks whether members already have the role, and gives private feedback when the role is not configured.</p><div class="tags" aria-label="Technologies"><span>JavaScript</span><span>Discord.js</span><span>Role automation</span></div><div class="project-bottom"><small>Private repository</small><a class="text-link" href="mailto:yemonstaa@gmail.com?subject=DonkeyVerifier%20project%20enquiry">Request access <span aria-hidden="true">↗</span></a></div></article>
+<article class="project compact"><div class="project-top"><span class="category">Discord moderation</span><span class="project-number">05</span></div><h3>DonkeyLogger</h3><p>A moderation logger covering messages, channel creation, edits and deletion, role changes, and voice moves. Audit-log lookups identify supported administrative actions.</p><div class="tags" aria-label="Technologies"><span>JavaScript</span><span>Discord.js</span><span>Audit logs</span></div><div class="project-bottom"><small>Private repository</small><a class="text-link" href="mailto:yemonstaa@gmail.com?subject=DonkeyLogger%20project%20enquiry">Request access <span aria-hidden="true">↗</span></a></div></article>
+</div></section>
+<section class="section" id="about" aria-labelledby="about-title"><div class="about"><div><p class="eyebrow">02 / About me</p><h2 id="about-title">Curious about how<br>things work.<br>Focused on making<br>them work better.</h2></div><div class="about-copy"><p>My work sits between software development and hands-on IT support.</p><p>I help maintain business IT environments, troubleshoot client systems, and manage dedicated game-server infrastructure. I also build tools for everyday workflows and online communities.</p><p>I’m continuing to develop my skills through personal projects, practical support work, and my studies in information technology.</p><div class="education" id="education"><p class="eyebrow">Education / 2024 – Present</p><h3>BS in Information Technology</h3><p>Zamboanga City State Polytechnic University</p></div></div></div>
+<div class="skills" id="skills"><article class="skill"><h3>Development &amp; automation</h3><p>HTML &amp; CSS · JavaScript · Java<br>Minecraft plugins · Discord automation<br>Git &amp; GitHub</p></article><article class="skill"><h3>Systems &amp; infrastructure</h3><p>Linux &amp; Windows Server · Pterodactyl<br>Dedicated infrastructure · JVM tuning<br>Network diagnostics</p></article><article class="skill"><h3>Technical support</h3><p>B2B IT support · Hardware diagnostics<br>Client deployment · Ticket resolution<br>Onboarding &amp; SOPs</p></article></div></section>
+<section class="section experience" id="experience" aria-labelledby="experience-title"><div class="experience-intro"><p class="eyebrow">03 / Experience</p><h2 id="experience-title">Hands-on,<br>every day.</h2></div><div><article class="job"><div><h3>Small Business &amp; B2B Solutions</h3><p class="role">IT Troubleshooter</p></div><time datetime="2025-09-26">Sep 2025 – Present</time><ul><li>Diagnose hardware, software, and network issues for internal staff and business clients.</li><li>Deploy and maintain client hardware and software, including updates, repairs, and configuration.</li><li>Respond to support requests to help minimize operational downtime.</li></ul></article><article class="job"><div><h3>EnderHost</h3><p class="role">Technical Support &amp; Infrastructure Specialist</p></div><time datetime="2026-06-26">Jun 2026 – Present</time><ul><li>Troubleshoot server crashes, Java runtimes, JVM settings, and startup commands.</li><li>Resolve plugin dependencies and version conflicts, and assist with custom server configurations.</li><li>Provide real-time technical support through client tickets.</li></ul><a class="text-link" href="https://enderhost.co" target="_blank" rel="noopener">Visit EnderHost <span aria-hidden="true">↗</span></a></article></div></section>
+<section class="contact" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">04 / Get in touch</p><h2 id="contact-title">Let’s build something useful.</h2><p>Have a project in mind or a role to discuss? I’m open to freelance work and full-time opportunities.</p></div><div class="contact-links"><a class="button" href="mailto:yemonstaa@gmail.com">Start a conversation <span class="arrow" aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:yemonstaa@gmail.com">yemonstaa@gmail.com</a><div class="contact-extra"><a href="https://github.com/yemonstaa" target="_blank" rel="noopener">GitHub ↗</a><span>Discord: zeeeeeeeeeee__</span></div></div></section>
+</div></main>
+<footer class="footer wrap"><p>© 2026 Joey Christian Bautista.<br>Built with care, in the Philippines.</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+<script>
+(function(){
+  var menu=document.querySelector('.menu');
+  var links=document.getElementById('navigation');
+  var header=document.querySelector('.site-header');
+  function closeMenu(returnFocus){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');links.classList.remove('is-open');if(returnFocus)menu.focus();}
+  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-label',open?'Open navigation':'Close navigation');links.classList.toggle('is-open',!open);});
+  links.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu(false);});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true')closeMenu(true);});
+  document.addEventListener('click',function(event){if(!header.contains(event.target))closeMenu(false);});
+  window.matchMedia('(min-width:761px)').addEventListener('change',function(){closeMenu(false);});
+  document.documentElement.classList.add('js');
+})();
+</script>
 </body>
 </html>
