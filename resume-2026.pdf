@@ -1,0 +1,83 @@
+%PDF-1.4
+% ASCII PDF
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 5537 >>
+stream
+BT /F2 21 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 748.00 Tm (Joey Christian Bautista) Tj ET
+BT /F2 8.5 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 729.00 Tm (WEB DEVELOPER  |  SYSTEMS ADMINISTRATOR  |  TECHNICAL SUPPORT) Tj ET
+BT /F1 8 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 714.00 Tm (Zamboanga City, Philippines  |  yemonstaa@gmail.com) Tj ET
+BT /F1 8 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 702.00 Tm (github.com/yemonstaa  |  yemonstaa.github.io/Portfolio) Tj ET
+0.190 0.350 0.850 RG 1.5 w 50 692 m 562 692 l S
+BT /F2 9 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 675.00 Tm (PROFILE) Tj ET
+BT /F1 8.1 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 660.00 Tm (Junior Web Developer, Systems Administrator, and Technical Support Specialist with hands-on experience supporting business IT) Tj ET
+BT /F1 8.1 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 649.80 Tm (environments, dedicated game-server infrastructure, and Discord automation. Builds practical tools and maintains server and client systems.) Tj ET
+BT /F2 9 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 637.60 Tm (EXPERIENCE) Tj ET
+BT /F2 8.25 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 622.60 Tm (IT Troubleshooter - Small Business & B2B Solutions) Tj ET
+BT /F2 7.5 Tf 0.190 0.350 0.850 rg 1 0 0 1 447.00 622.60 Tm (Sep 2025 - Present) Tj ET
+BT /F1 7.7 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 611.60 Tm (Provides internal and external technical support across IT systems and client hardware and software deployments.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 602.20 Tm (- Diagnoses hardware, software, and network issues for staff and business clients.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 593.00 Tm (- Configures specialized client hardware and software; performs maintenance, updates, and repairs.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 583.80 Tm (- Responds to support requests to help minimize operational downtime.) Tj ET
+BT /F2 8.25 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 571.60 Tm (EnderHost - Technical Support & Infrastructure Specialist) Tj ET
+BT /F2 7.5 Tf 0.190 0.350 0.850 rg 1 0 0 1 447.00 571.60 Tm (Jun 2026 - Present) Tj ET
+BT /F1 7.7 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 560.60 Tm (Supports and maintains client game-server environments.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 551.20 Tm (- Troubleshoots server crashes, ticketed issues, Java runtimes, JVM settings, and startup commands.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 542.00 Tm (- Resolves plugin dependencies and version conflicts; assists with custom server configurations.) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 56.00 532.80 Tm (- Provides real-time technical support to clients.) Tj ET
+BT /F2 9 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 520.60 Tm (SELECTED PROJECTS) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 505.60 Tm (Tillstead - Desktop POS) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 144.93 505.60 Tm (- Offline-first Electron register with cashier/admin roles, barcode scanning, held orders, cash/GCash checkout, inventory alerts,) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 58.00 496.60 Tm (protected voids/refunds, CSV, reports, backups, and ESC/POS receipts.) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 486.60 Tm (MFDungeons) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 106.33 486.60 Tm (- Paper plugin for GUI-configured party dungeons, instance worlds, MythicMobs waves and bosses, progression triggers, timed BossBars,) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 58.00 477.60 Tm (rewards, and cleanup.) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 467.60 Tm (MineFront) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 94.63 467.60 Tm (- Owner and Lead Administrator. Provisioned and tuned dedicated Ryzen 9 9950X / 32 GB infrastructure for a multi-gamemode Minecraft) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 58.00 458.60 Tm (network; configured JVM settings, startup scripts, and Pterodactyl management. Network in development.) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 448.60 Tm (DonkeyVerifier) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 111.99 448.60 Tm (- Discord verification bot with one-click verified-role assignment, duplicate-role checks, and private setup errors.) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 438.60 Tm (DonkeyLogger) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 111.54 438.60 Tm (- Discord moderation logger for message, channel, role, and voice activity, with audit-log lookups for supported administrative changes.) Tj ET
+BT /F2 9 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 427.60 Tm (SKILLS) Tj ET
+BT /F1 7.7 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 412.60 Tm (Systems: Pterodactyl Panel, Linux and Windows Server, dedicated infrastructure, JVM optimization, network diagnostics) Tj ET
+BT /F1 7.7 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 403.20 Tm (Development: HTML, CSS, JavaScript, Java, Minecraft plugins, Discord automation, Git and GitHub) Tj ET
+BT /F1 7.7 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 393.80 Tm (IT Support: B2B technical support, hardware diagnostics, client deployment, ticket resolution, onboarding and SOPs) Tj ET
+BT /F2 9 Tf 0.190 0.350 0.850 rg 1 0 0 1 50.00 382.40 Tm (EDUCATION) Tj ET
+BT /F2 7.8 Tf 0.090 0.150 0.330 rg 1 0 0 1 50.00 367.40 Tm (Bachelor of Science in Information Technology) Tj ET
+BT /F1 7.6 Tf 0.320 0.380 0.470 rg 1 0 0 1 277.00 367.40 Tm (Zamboanga City State Polytechnic University) Tj ET
+BT /F1 7.5 Tf 0.320 0.380 0.470 rg 1 0 0 1 50.00 357.40 Tm (2024 - Present) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Producer (Codex) /Title (Joey Christian Bautista Resume 2026) /Author (Joey Christian Bautista) >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000021 00000 n 
+0000000070 00000 n 
+0000000127 00000 n 
+0000000263 00000 n 
+0000000360 00000 n 
+0000000462 00000 n 
+0000006050 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R /Info 7 0 R >>
+startxref
+6168
+%%EOF
